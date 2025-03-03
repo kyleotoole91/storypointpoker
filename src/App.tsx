@@ -3,6 +3,7 @@ import { io, Socket } from 'socket.io-client'
 import { Room, fibonacciPoints, tshirtSizes } from './types'
 import { PieChart } from './components/PieChart'
 import './App.css'
+import ocucoLogo from '/ocuco.svg'
 
 function App() {
   const [socket, setSocket] = useState<Socket | null>(null)
@@ -88,6 +89,7 @@ function App() {
   if (!isJoined) {
     return (
       <div className="join-form">
+        <img src={ocucoLogo} alt="Ocuco" className="company-logo" />
         <input
           type="text"
           placeholder="Your Name"
@@ -110,7 +112,8 @@ function App() {
   return (
     <div className="poker-room">
       <div className="header">
-        <div className="room-id">Room: {roomId}</div>
+        <img src={ocucoLogo} alt="Ocuco" className="company-logo" />
+        <div className="room-id">{roomId}</div>
         <button className="leave-button" onClick={handleLeave}>Leave Room</button>
       </div>
       <div className="controls">

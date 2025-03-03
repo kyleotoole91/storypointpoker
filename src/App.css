@@ -44,20 +44,20 @@
   height: 90px;
   font-size: 1.2rem;
   cursor: pointer;
-  border: 2px solid #646cff;
+  border: 2px solid #ff6600;
   background: white;
-  color: #646cff;
+  color: #ff6600;
   border-radius: 8px;
   transition: all 0.2s;
 }
 
 .voting-area button:hover {
-  background: #646cff;
+  background: #ff6600;
   color: white;
 }
 
 .voting-area button.selected {
-  background: #646cff;
+  background: #ff6600;
   color: white;
 }
 
@@ -81,15 +81,17 @@ button, select {
   padding: 0.6rem 1.2rem;
   font-size: 1rem;
   border-radius: 8px;
-  border: 1px solid #646cff;
+  border: 1px solid #ff6600;
   background: white;
-  color: #646cff;
+  color: #ff6600;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 button:hover, select:hover {
-  border-color: #747bff;
+  border-color: #ff8533;
+  background: #ff6600;
+  color: white;
 }
 
 .logo {
@@ -131,7 +133,7 @@ button:hover, select:hover {
 .room-id {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #646cff;
+  color: #ff6600;
   margin-bottom: 1rem;
 }
 
@@ -143,11 +145,17 @@ button:hover, select:hover {
 }
 
 .leave-button {
-  background-color: #ff4444;
+  background-color: #ff6600;
   color: white;
   border: none;
 }
 
 .leave-button:hover {
-  background-color: #cc0000;
+  background-color: #cc5200;
+}
+
+.company-logo {
+  width: 129px;
+  height: 24px;
+  margin-bottom: 1rem;
 }

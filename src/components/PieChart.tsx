@@ -24,12 +24,14 @@ export const PieChart = ({ members, revealed }: PieChartProps) => {
       {
         data: Object.values(voteCounts),
         backgroundColor: [
-          '#FF6384',
-          '#36A2EB',
-          '#FFCE56',
-          '#4BC0C0',
-          '#9966FF',
-          '#FF9F40',
+          '#ff6600', // Ocuco orange
+          '#4CAF50', // Green
+          '#2196F3', // Blue
+          '#9C27B0', // Purple
+          '#FFC107', // Amber
+          '#E91E63', // Pink
+          '#00BCD4', // Cyan
+          '#795548', // Brown
         ],
       },
     ],
