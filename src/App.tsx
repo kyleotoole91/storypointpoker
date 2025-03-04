@@ -140,17 +140,19 @@ function App() {
         ))}
       </div>
 
-      <div className="members-list">
-        <h3>Team Members</h3>
-        {room?.members.map((member) => (
-          <div key={member.id} className="member">
-            {member.name}: {room.revealed ? member.vote || 'No vote' : member.vote ? '✓' : '...'}
-          </div>
-        ))}
-      </div>
+      <div className="members-and-results">
+        <div className="members-list">
+          <h3>Team Members</h3>
+          {room?.members.map((member) => (
+            <div key={member.id} className="member">
+              {member.name}: {room.revealed ? member.vote || 'No vote' : member.vote ? '✓' : '...'}
+            </div>
+          ))}
+        </div>
 
-      <div className="results">
-        {room && <PieChart members={room.members} revealed={room.revealed} />}
+        <div className="results">
+          {room && <PieChart members={room.members} revealed={room.revealed} />}
+        </div>
       </div>
     </div>
   )
