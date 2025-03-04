@@ -25,10 +25,23 @@
 }
 
 .controls {
-  display: flex;
+  min-height: 40px; /* Maintains spacing when empty */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  justify-content: center;
   margin-bottom: 1rem;
+}
+
+.controls select {
+  justify-self: start;
+}
+
+.controls button:first-of-type {
+  justify-self: center;
+}
+
+.controls button:last-of-type {
+  justify-self: end;
 }
 
 .voting-area {
@@ -160,14 +173,28 @@ button:disabled:hover {
   font-size: 1.2rem;
   font-weight: bold;
   color: #ff6600;
-  margin-bottom: 1rem;
+  margin: 0;
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
+  gap: 1rem;
   margin-bottom: 1rem;
+}
+
+.header .company-logo {
+  margin: 0;
+  justify-self: start;
+}
+
+.header .room-id {
+  justify-self: center;
+}
+
+.header .leave-button {
+  justify-self: end;
 }
 
 .leave-button {
@@ -183,7 +210,11 @@ button:disabled:hover {
 .company-logo {
   width: 129px;
   height: 24px;
-  margin-bottom: 1rem;
+}
+
+.join-form .company-logo {
+  margin: 0 auto 1rem;
+  display: block;
 }
 
 .admin-checkbox {
@@ -212,4 +243,10 @@ button:disabled:hover {
 .remove-member:hover {
   background: #cc0000;
   color: white;
+}
+
+.app-title {
+  color: #ff6600;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
 }

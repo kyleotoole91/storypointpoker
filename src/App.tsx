@@ -109,6 +109,7 @@ function App() {
   if (!isJoined) {
     return (
       <div className="join-form">
+        <h1 className="app-title">Story Point Poker</h1>
         <img src={ocucoLogo} alt="Ocuco" className="company-logo" />
         {error && <div className="error-message">{error}</div>}
         <input
@@ -144,14 +145,15 @@ function App() {
     <div className="poker-room">
       <div className="header">
         <img src={ocucoLogo} alt="Ocuco" className="company-logo" />
-        <div className="room-id">
+        <span className="room-id">
           {roomId}
           {isAdmin && ' (Admin)'}
-        </div>
+        </span>
         <button className="leave-button" onClick={handleLeave}>Leave Room</button>
       </div>
+
       <div className="controls">
-        {isAdmin && (
+        {isAdmin ? (
           <>
             <select 
               value={room?.votingSystem} 
@@ -166,10 +168,10 @@ function App() {
             >
               Reveal Cards
             </button>
-            <button onClick={handleReset}>
-              Reset Votes
-            </button>
+            <button onClick={handleReset}>Reset Votes</button>
           </>
+        ) : (
+          <div style={{ gridColumn: "1 / -1" }}></div>
         )}
       </div>
 
