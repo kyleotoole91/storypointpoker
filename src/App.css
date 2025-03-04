@@ -104,6 +104,19 @@ button:hover, select:hover {
   color: white;
 }
 
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #ccc;
+  color: #666;
+}
+
+button:disabled:hover {
+  background: white;
+  color: #666;
+  border-color: #ccc;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

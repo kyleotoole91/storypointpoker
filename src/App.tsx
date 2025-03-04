@@ -124,7 +124,12 @@ function App() {
           <option value="fibonacci">Fibonacci</option>
           <option value="tshirt">T-Shirt Sizes</option>
         </select>
-        <button onClick={handleReveal}>Reveal Cards</button>
+        <button 
+          onClick={handleReveal} 
+          disabled={!room?.members.some(member => member.vote)}
+        >
+          Reveal Cards
+        </button>
         <button onClick={handleReset}>Reset Votes</button>
       </div>
 
